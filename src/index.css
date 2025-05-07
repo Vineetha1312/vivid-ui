@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Default Theme: light */
+    --background: 0 0% 100%; /* White */
+    --foreground: 222.2 84% 4.9%; /* Dark Gray */
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 222.2 84% 4.9%; /* Dark Gray */
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 222.2 84% 4.9%; /* Dark Gray */
+    --primary: 22.6 95.3% 65.1%; /* brand-orange: #FF7A50 */
+    --primary-foreground: 0 0% 100%; /* White */
+    --secondary: 210 40% 96.1%; /* Light Gray-Blue */
+    --secondary-foreground: 222.2 47.4% 11.2%; /* Dark Blue-Gray */
+    --muted: 210 40% 96.1%; /* Light Gray-Blue */
+    --muted-foreground: 215.4 16.3% 46.9%; /* Medium Gray */
+    --accent: 210 40% 96.1%; /* Light Gray-Blue */
+    --accent-foreground: 222.2 47.4% 11.2%; /* Dark Blue-Gray */
+    --destructive: 0 84.2% 60.2%; /* Red */
+    --destructive-foreground: 0 0% 100%; /* White */
+    --border: 214.3 31.8% 91.4%; /* Light Gray */
+    --input: 214.3 31.8% 91.4%; /* Light Gray */
+    --ring: 222.2 84% 4.9%; /* Dark Gray */
+    --radius: 0.5rem;
+    /* Font Families */
+    --font-sans: "Inter", system-ui, sans-serif; /* Default body font */
+    --font-serif: "Georgia", serif;
+    --font-heading: "Inter", system-ui, sans-serif; /* Default heading font */
+  }
+
+  .theme-light-alt {
+    /* Alternative Light Theme (Purple Primary, Skyblue BG) */
+    --background: 210 60% 98%; /* Very Light Blue (Skyblue) */
+    --foreground: 224 71% 4%; /* Very Dark Blue */
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 224 71% 4%; /* Very Dark Blue */
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 224 71% 4%; /* Very Dark Blue */
+    --primary: 262.1 83.3% 57.8%; /* Purple */
+    --primary-foreground: 0 0% 100%; /* White */
+    --secondary: 220 14.3% 95.9%; /* Lighter Gray */
+    --secondary-foreground: 220 8.9% 46.1%; /* Medium Gray */
+    --muted: 220 14.3% 95.9%; /* Lighter Gray */
+    --muted-foreground: 220 8.9% 46.1%; /* Medium Gray */
+    --accent: 220 14.3% 95.9%; /* Lighter Gray */
+    --accent-foreground: 220 8.9% 46.1%; /* Medium Gray */
+    --destructive: 0 72.2% 50.6%; /* Darker Red */
+    --destructive-foreground: 0 0% 100%; /* White */
+    --border: 220 13% 91%; /* Light Gray */
+    --input: 220 13% 91%; /* Light Gray */
+    --ring: 262.1 83.3% 57.8%; /* Purple */
+    --radius: 0.75rem;
+    /* Font Families */
+    --font-sans: "Lato", system-ui, sans-serif; /* Alternative body font */
+    --font-serif: "Georgia", serif;
+    --font-heading: "Lato", system-ui, sans-serif; /* Alternative heading font */
+  }
+
+  .theme-dark {
+    /* Default Dark Theme (Black BG with Orange Primary) */
+    --background: 222.2 84% 4.9%; /* Dark Gray (Black) */
+    --foreground: 210 40% 98%; /* Very Light Gray-Blue */
+    --card: 222.2 84% 4.9%; /* Dark Gray */
+    --card-foreground: 210 40% 98%; /* Very Light Gray-Blue */
+    --popover: 222.2 84% 4.9%; /* Dark Gray */
+    --popover-foreground: 210 40% 98%; /* Very Light Gray-Blue */
+    --primary: 22.6 95.3% 65.1%; /* brand-orange: #FF7A50 */
+    --primary-foreground: 222.2 47.4% 11.2%; /* Dark Blue-Gray */
+    --secondary: 217.2 32.6% 17.5%; /* Darker Gray-Blue */
+    --secondary-foreground: 210 40% 98%; /* Very Light Gray-Blue */
+    --muted: 217.2 32.6% 17.5%; /* Darker Gray-Blue */
+    --muted-foreground: 215 20.2% 65.1%; /* Lighter Gray */
+    --accent: 217.2 32.6% 17.5%; /* Darker Gray-Blue */
+    --accent-foreground: 210 40% 98%; /* Very Light Gray-Blue */
+    --destructive: 0 62.8% 30.6%; /* Dark Red */
+    --destructive-foreground: 0 0% 100%; /* White */
+    --border: 217.2 32.6% 17.5%; /* Darker Gray-Blue */
+    --input: 217.2 32.6% 17.5%; /* Darker Gray-Blue */
+    --ring: 212.7 26.8% 83.9%; /* Light Blue */
+    --radius: 0.5rem;
+    /* Font Families */
+    --font-sans: "Inter", system-ui, sans-serif; /* Same as default light */
+    --font-serif: "Georgia", serif;
+    --font-heading: "Inter", system-ui, sans-serif; /* Same as default light */
+  }
+
+  .theme-dark-alt {
+    /* Alternative Dark Theme (Black BG with Green Primary) */
+    --background: 240 10% 3.9%; /* Near Black */
+    --foreground: 210 40% 98%; /* Very Light Gray-Blue */
+    --card: 240 5.9% 10%; /* Dark Gray */
+    --card-foreground: 210 40% 98%; /* Very Light Gray-Blue */
+    --popover: 240 10% 3.9%; /* Near Black */
+    --popover-foreground: 210 40% 98%; /* Very Light Gray-Blue */
+    --primary: 144.9 80.4% 58.2%; /* Green-300 HSL */
+    --primary-foreground: 144.9 80.4% 10%; /* Dark Green for contrast */
+    --secondary: 240 3.7% 15.9%; /* Darker Gray */
+    --secondary-foreground: 210 40% 98%; /* Very Light Gray-Blue */
+    --muted: 240 3.7% 15.9%; /* Darker Gray */
+    --muted-foreground: 240 5% 64.9%; /* Lighter Gray */
+    --accent: 240 3.7% 15.9%; /* Darker Gray */
+    --accent-foreground: 210 40% 98%; /* Very Light Gray-Blue */
+    --destructive: 0 72.2% 50.6%; /* Darker Red */
+    --destructive-foreground: 0 0% 100%; /* White */
+    --border: 240 3.7% 15.9%; /* Darker Gray */
+    --input: 240 3.7% 15.9%; /* Darker Gray */
+    --ring: 144.9 80.4% 58.2%; /* Green */
+    --radius: 0.375rem;
+    /* Font Families */
+    --font-sans: "Roboto Mono", monospace; /* Monospace body font */
+    --font-serif: "Times New Roman", serif;
+    --font-heading: "Playfair Display", serif; /* Serif heading font */
+  }
+
+  .theme-dark-alt-2 {
+    /* Alternative Dark Theme 2 (Black BG with Yellow Primary) */
+    --background: 240 10% 3.9%; /* Near Black */
+    --foreground: 210 40% 98%; /* Very Light Gray-Blue */
+    --card: 240 5.9% 10%; /* Dark Gray */
+    --card-foreground: 210 40% 98%; /* Very Light Gray-Blue */
+    --popover: 240 10% 3.9%; /* Near Black */
+    --popover-foreground: 210 40% 98%; /* Very Light Gray-Blue */
+    --primary: 48 100% 50%; /* Yellow */
+    --primary-foreground: 240 10% 3.9%; /* Near Black for contrast with yellow */
+    --secondary: 240 3.7% 15.9%; /* Darker Gray */
+    --secondary-foreground: 210 40% 98%; /* Very Light Gray-Blue */
+    --muted: 240 3.7% 15.9%; /* Darker Gray */
+    --muted-foreground: 240 5% 64.9%; /* Lighter Gray */
+    --accent: 240 3.7% 15.9%; /* Darker Gray */
+    --accent-foreground: 210 40% 98%; /* Very Light Gray-Blue */
+    --destructive: 0 72.2% 50.6%; /* Darker Red */
+    --destructive-foreground: 0 0% 100%; /* White */
+    --border: 240 3.7% 15.9%; /* Darker Gray */
+    --input: 240 3.7% 15.9%; /* Darker Gray */
+    --ring: 48 100% 50%; /* Yellow */
+    --radius: 0.375rem;
+    /* Font Families */
+    --font-sans: "Roboto", sans-serif;
+    --font-serif: "Times New Roman", serif;
+    --font-heading: "Montserrat", sans-serif;
+  }
+
+  /* Apply base styles using CSS variables */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    /* Smooth transitions for colors and background-color */
+    transition-property: color, background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Base link styles */
+  a {
+    @apply text-primary hover:text-primary/80;
+    transition-property: color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
+
+  /* Apply heading font to common heading elements */
+  h1, h2, h3, h4, h5, h6 {
+      @apply font-heading;
+  }
+}
